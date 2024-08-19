@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body{
+        background-color: #006eff;
+      }
+      .container {
+        margin-left: 320px;
+        width: 100%;
+        max-width: 45vw;
+        min-height: 90vh;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #add-btn {
+        padding: 10px;
+        width: 80px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      #task-input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 400px;
+      }
+      .task-list,
+      .completed-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .task-item,
+      .completed-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #afd4f1;
+        padding: 10px;
+        border-radius: 5px;
+        width: 400px;
+      }
+
+      .completed-item {
+        background-color: #afd4f1;
+        text-decoration: line-through;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>To Do</h1>
+      <label for="task-input">Add Task</label>
+      <input id="task-input" type="text" />
+      <button id="add-btn">Add</button>
+      <br /><br />
+      <h3>Task List</h3>
+      <div class="task">
+        <div class="task-list"></div>
+      </div>
+
+      <h3>Completed List</h3>
+      <div class="completed">
+        <div class="completed-list"></div>
+      </div>
+    </div>
+
+    <script src="./todo.js"></script>
+  </body>
+</html>
